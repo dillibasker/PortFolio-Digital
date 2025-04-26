@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
               A creative developer focused on building exceptional digital experiences
               that are fast, accessible, visually appealing, and responsive.
-            </p>
+            </p>  
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
