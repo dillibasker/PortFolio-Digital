@@ -17,8 +17,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
-              A creative developer focused on building exceptional digital experiences
-              that are fast, accessible, visually appealing, and responsive.
+              
             </p>  
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
