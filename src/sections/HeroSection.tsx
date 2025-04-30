@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Full-stack developer specializing in creating beautiful, functional, and user-centered digital experiences.
+            I am a passionate Full-Stack Developer and Blockchain Developer, currently pursuing my B.E. in Computer Science and Engineering (CSE), 2nd year.
           </motion.p>
           
           <motion.div 

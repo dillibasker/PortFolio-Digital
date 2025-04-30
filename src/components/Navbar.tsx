@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/dillibasker', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/dilli-basker-8aaa262ba', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:dillibasker1@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:dillibasker1@gmail.com', label: 'Email' },
   ];
 
   return (

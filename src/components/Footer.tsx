@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/dillibasker', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/dilli-basker-8aaa262ba', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:dillibasker1@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:dillibasker1@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -58,11 +58,11 @@ const Footer: React.FC = () => {
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">dillibasker1@example.com</p>
-            <p className="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">dillibasker1@gmail.com</p>
+            <p className="text-gray-600 dark:text-gray-400">Chennai , TamilNadu , India</p>
           </div>
         </div>
-        
+                
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
             &copy; {currentYear} Dilli Basker. All rights reserved.

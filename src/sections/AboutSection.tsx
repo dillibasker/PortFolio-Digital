@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { AnimatedTorusKnot } from '../components/3d/AnimatedTorusKnot';
+import resume from "../assets/resume.pdf"
 
 const AboutSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -61,35 +62,41 @@ const AboutSection: React.FC = () => {
             </motion.div>
             
             <motion.p variants={itemVariants} className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm a full-stack developer with a passion for building beautiful, functional, and user-centered digital experiences. With a background in both design and development, I bring a unique perspective to every project.
+            Focused on building real-world web and mobile applications with clean, scalable code.
+Experienced in full-stack development, DApps, and smart contract integration.
+Skilled in React.js, Node.js, MongoDB, Flutter, Solidity, and modern tools.
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-gray-600 dark:text-gray-300 mb-6">
-              I believe that the best digital experiences are created when design and technology work together seamlessly. I'm constantly learning and experimenting with new technologies and design patterns to create better user experiences.
+            Built projects ranging from task managers to blockchain-based credential systems.
+Participated in 9+ hackathons with real-time, AI, and microservices use cases.
+Exploring the intersection of AI and blockchain to build impactful solutions.
+Committed to delivering products that are innovative, efficient, and user-focused.
             </motion.p>
             
             <motion.div variants={itemVariants} className="grid grid-cols-2 gap-6 mb-8">
               <div>
-                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">5+</h3>
+                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">2+</h3>
                 <p className="text-gray-600 dark:text-gray-400">Years of experience</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">50+</h3>
+                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">15+</h3>
                 <p className="text-gray-600 dark:text-gray-400">Projects completed</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">30+</h3>
+                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">8+</h3>
                 <p className="text-gray-600 dark:text-gray-400">Happy clients</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">10+</h3>
+                <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-2">15+</h3>
                 <p className="text-gray-600 dark:text-gray-400">Technologies mastered</p>
               </div>
             </motion.div>
             
             <motion.div variants={itemVariants}>
               <a 
-                href="/your-resume.pdf" 
+                href={resume} 
+                download // <- this triggers the download
                 className="px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-full font-medium transition-colors inline-block"
               >
                 Download Resume

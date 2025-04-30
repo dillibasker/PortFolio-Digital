@@ -175,7 +175,7 @@ const ContactSection: React.FC = () => {
                 {[
                   { icon: GitHub, href: 'https://github.com/dillibasker', label: 'GitHub' },
                   { icon: Linkedin, href: 'https://www.linkedin.com/in/dilli-basker-8aaa262ba', label: 'LinkedIn' },
-                  { icon: Twitter, href: 'mailto:dillibasker1@example.com', label: 'Twitter' }
+                  { icon: Twitter, href: 'https://x.com/DilliBasker?t=I_K18H9JozwV46AM_VF8Gw&s=09', label: 'Twitter' }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -203,7 +203,7 @@ const ContactSection: React.FC = () => {
                 I'm currently available for freelance work. If you have a project that needs my expertise, let's have a chat.
               </p>
               <motion.a
-                href="mailto:hello@example.com"
+                href="mailto:dillibasker1@gmail.com"
                 className="inline-block px-6 py-3 bg-white text-primary-600 rounded-lg font-medium transition-colors hover:bg-gray-100"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
