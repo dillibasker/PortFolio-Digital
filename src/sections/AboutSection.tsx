@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { AnimatedTorusKnot } from '../components/3d/AnimatedTorusKnot';
-import resume from "../assets/resume.pdf"
+import resume2 from "../assets/resume2.pdf"
 
 const AboutSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -95,7 +95,7 @@ Committed to delivering products that are innovative, efficient, and user-focuse
             
             <motion.div variants={itemVariants}>
               <a 
-                href={resume} 
+                href={resume2} 
                 download // <- this triggers the download
                 className="px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-full font-medium transition-colors inline-block"
               >
