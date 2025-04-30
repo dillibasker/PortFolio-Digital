@@ -9,6 +9,10 @@ const skillCategories = [
     title: 'Frontend',
     skills: [
       { name: 'React', level: 90 },
+      { name: 'Next', level: 90 },
+      { name: 'React Native', level: 90 },
+      { name: 'Flutter', level: 90 },
+      { name: 'Vite', level: 90 },
       { name: 'TypeScript', level: 85 },
       { name: 'JavaScript', level: 95 },
       { name: 'HTML/CSS', level: 90 },
@@ -20,19 +24,43 @@ const skillCategories = [
     skills: [
       { name: 'Node.js', level: 85 },
       { name: 'Express', level: 80 },
+      { name: 'Django', level: 75 },
+      { name: 'Firebase', level: 65 },
       { name: 'MongoDB', level: 75 },
       { name: 'SQL', level: 70 },
-      { name: 'GraphQL', level: 65 },
+      {name: 'REST APIs', level: 70 },
+    ],
+  },
+  {
+    title: 'Blockchain',
+    skills: [
+      { name: 'Solidity', level: 90 },
+      { name: 'Ethereum', level: 75 },
+      { name: 'Ethers.js', level: 65 },
+      { name: 'IPFS (Filecoin, Infura)', level: 80 },
+      { name: 'Smart Contract Deployment & Testing', level: 80 },
+    ],
+  },
+  {
+    title: 'AI/ML',
+    skills: [
+      { name: 'TensorFlow', level: 70 },
+      { name: 'Scikit-learn', level: 75 },
+      { name: 'Python', level: 90 },
+      { name: 'PyTorch', level: 80 },
+      { name: 'Truffle', level: 70 },
     ],
   },
   {
     title: 'Tools',
     skills: [
       { name: 'Git', level: 90 },
-      { name: 'Webpack', level: 75 },
+      { name: 'GitHub', level: 95 },
       { name: 'Docker', level: 65 },
       { name: 'Jest', level: 80 },
       { name: 'Figma', level: 70 },
+      {name: 'vercel', level: 70 },
+      {name: 'Postman', level: 70 },
     ],
   },
 ];
@@ -130,26 +158,6 @@ const SkillsSection: React.FC = () => {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-2xl font-bold mb-8">Other Technologies I've Worked With</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              'Next.js', 'Vue', 'Angular', 'Redux', 'Gatsby', 'SASS/SCSS', 
-              'Styled Components', 'Material UI', 'Chakra UI', 'Framer Motion',
-              'PostgreSQL', 'Firebase', 'AWS', 'Azure', 'Netlify', 'Vercel',
-              'Cypress', 'Storybook', 'Webpack', 'Vite', 'Three.js'
-            ].map((tech, index) => (
-              <motion.span
-                key={index}
-                className="px-4 py-2 bg-white dark:bg-dark-300 shadow-md rounded-lg text-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.4, delay: 1 + (index * 0.05) }}
-                whileHover={{ scale: 1.05, backgroundColor: '#f0f0ff' }}
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>
