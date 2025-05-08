@@ -1,12 +1,19 @@
-import React, { useRef, Suspense } from 'react';
+import React, { useRef, Suspense ,useState} from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { MapPin, Phone, Mail, Github as GitHub, Linkedin, Twitter } from 'lucide-react';
 import FloatingShapes from '../components/3d/FloatingShapes';
+import { sub } from 'framer-motion/client';
 
 const ContactSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,19 +37,12 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const payload = {
-      name,
-      email,
-      subject,
-      message,
-    };
   
     try {
       const res = await fetch("http://localhost:5000/api/contact/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(formData),
       });
   
       const data = await res.json();
@@ -52,6 +52,7 @@ const ContactSection: React.FC = () => {
       alert("Failed to send message.");
     }
   };
+  
   
 
   return (
@@ -104,6 +105,8 @@ const ContactSection: React.FC = () => {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-200 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent outline-none transition-colors"
                     placeholder="Dilli Basker"
                   />
@@ -115,7 +118,8 @@ const ContactSection: React.FC = () => {
                   <input
                     type="email"
                     id="email"
-                
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-200 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent outline-none transition-colors"
                     placeholder="example@gmail.com"
                   />
@@ -127,7 +131,8 @@ const ContactSection: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  id="subject"
+                  id="subject" value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-200 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent outline-none transition-colors"
                   placeholder="Project Inquiry"
                 />
@@ -139,6 +144,8 @@ const ContactSection: React.FC = () => {
                 <textarea
                   id="message"
                   rows={5}
+                  value={formData.message}
+  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-200 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent outline-none transition-colors"
                   placeholder="Hello, I'd like to talk about..."
                 ></textarea>
