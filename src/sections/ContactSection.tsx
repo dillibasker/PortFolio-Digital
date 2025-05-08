@@ -28,6 +28,32 @@ const ContactSection: React.FC = () => {
     },
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const payload = {
+      name,
+      email,
+      subject,
+      message,
+    };
+  
+    try {
+      const res = await fetch("http://localhost:5000/api/contact/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+  
+      const data = await res.json();
+      alert(data.message || "Message sent!");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message.");
+    }
+  };
+  
+
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-dark-200 relative overflow-hidden">
       {/* 3D Background Animation */}
@@ -69,7 +95,7 @@ const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <motion.div variants={itemVariants} className="bg-white dark:bg-dark-300 rounded-xl shadow-md p-8 backdrop-blur-lg bg-opacity-80">
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -89,6 +115,7 @@ const ContactSection: React.FC = () => {
                   <input
                     type="email"
                     id="email"
+                
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-200 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent outline-none transition-colors"
                     placeholder="example@gmail.com"
                   />
