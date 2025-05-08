@@ -16,6 +16,16 @@ const projects = [
   },
   {
     id: 2,
+    title: 'AI-ChatBot-Ajith',
+    description: 'Ajith Kumar AI Chatbox interacts like Thala himself—answering questions, sharing quotes, and engaging fans with style, attitude, and intelligence for a true fan experience.',
+    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['React', 'Node.js', 'MongoDB',],
+    demoLink: 'https://ajith-ai-chat-bot.vercel.app/',
+    codeLink: 'https://github.com/dillibasker/Ajith-AI-ChatBot',
+    category: 'Full stack',
+  },
+  {
+    id: 3,
     title: 'Lottory Dapp',
     description: 'A decentralized lottery application using smart contracts, ensuring fair winner selection, transparent participation, and secure fund handling on the blockchain.',
     image: 'https://images.pexels.com/photos/6177642/pexels-photo-6177642.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -25,7 +35,7 @@ const projects = [
     category: 'Blockchain',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Marketplace',
     description: 'Blockchain-based marketplace for uploading, buying, and verifying AI models using smart contracts, IPFS storage, and secure wallet integration.',
     image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -35,7 +45,7 @@ const projects = [
     category: 'Blockchain',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Decentralized Identity Verification',
     description: 'A blockchain-based system for securely storing and verifying user identities and certificates using smart contracts and IPFS technology.',
     image: 'https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -45,7 +55,7 @@ const projects = [
     category: 'Blockchain',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Portfolio Website',
     description: 'A modern portfolio website with 3D animations and interactive elements.',
     image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
