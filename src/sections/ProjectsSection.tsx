@@ -4,13 +4,13 @@ import ProjectCard from '../components/ProjectCard';
 
 // Example project data
 const projects = [
-  {
+{
     id: 1,
-    title: 'Ai-MarketPlace',
-    description: 'Full-stack AI marketplace leveraging blockchain for secure model ownership, IPFS for storage, and smart contracts for decentralized transactions.',
+    title: 'BlockBattle-Decentralised Game',
+    description: 'A decentralized play-to-earn strategy game where players battle, earn tokens, and trade NFT assets securely on the blockchain.',
     image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['React', 'Node.js', 'MongoDB', 'TensorFlow' , 'Solidity' , 'Ethereum'],
-    demoLink: 'https://example.com',
+    tags: ['React', 'Node.js', 'MongoDB', 'Solidity' , 'Ethereum'],
+    demoLink: 'https://blockchain-game-gamma.vercel.app/',
     codeLink: 'https://github.com/dillibasker/AI-Marketplace-Blockchain',
     category: 'Blockchain',
   },
@@ -63,6 +63,16 @@ const projects = [
     demoLink: 'https://port-folio-digital.vercel.app/',
     codeLink: 'https://github.com/dillibasker/PortFolio-Digital',
     category: 'Full stack',
+  },
+{
+    id: 7,
+    title: 'Ai-MarketPlace',
+    description: 'Full-stack AI marketplace leveraging blockchain for secure model ownership, IPFS for storage, and smart contracts for decentralized transactions.',
+    image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['React', 'Node.js', 'MongoDB', 'TensorFlow' , 'Solidity' , 'Ethereum'],
+    demoLink: 'https://example.com',
+    codeLink: 'https://github.com/dillibasker/AI-Marketplace-Blockchain',
+    category: 'Blockchain',
   },
 ];
 
