@@ -11,7 +11,7 @@ const projects = [
     image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200',
     tags: ['React', 'Node.js', 'MongoDB', 'Solidity' , 'Ethereum'],
     demoLink: 'https://blockchain-game-gamma.vercel.app/',
-    codeLink: 'https://github.com/dillibasker/AI-Marketplace-Blockchain',
+    codeLink: 'https://github.com/dillibasker/Blockchain-Game',
     category: 'Blockchain',
   },
   {
